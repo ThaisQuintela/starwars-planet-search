@@ -21,8 +21,10 @@ export const StarWarsData = async () => {
   const results = await fetchData();
   const finalResult = results.flat();
   return finalResult;
-}
+};
 
-/* export const filmsData = async () {
-
-} */
+export const filmsData = async () => {
+  const requestData = await fetch('https://swapi-trybe.herokuapp.com/api/films/');
+  const { results } = await requestData.json();
+  return results;
+};

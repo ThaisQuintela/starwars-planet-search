@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import StarWarsContext from '../../context/StarWarsContext';
 
 function Table() {
-  const { isLoading, filters, filterByNumericValue } = useContext(StarWarsContext);
+  const {
+    isLoading, filters, filterByNumericValue, filmData,
+  } = useContext(StarWarsContext);
 
   const filterByName = filterByNumericValue
     .filter((planet) => planet.name.toLowerCase()
@@ -39,7 +41,11 @@ function Table() {
                 <td>{planet.terrain}</td>
                 <td>{planet.surface_water}</td>
                 <td>{planet.population}</td>
-                <td>{planet.films}</td>
+                <td>
+                  {(planet.films).map(
+                    (film) => filmData[(film[film.length - 2]) - 1].title,
+                  )}
+                </td>
                 <td>{planet.residents}</td>
               </tr>))}
           </tbody>

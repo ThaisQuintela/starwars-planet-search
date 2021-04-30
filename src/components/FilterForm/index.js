@@ -3,7 +3,7 @@ import StarWarsContext from '../../context/StarWarsContext';
 
 function FilterForm() {
   const {
-    data, filters, setFilters, setFilterByNumericValue,
+    planetData, filters, setFilters, setFilterByNumericValue,
   } = useContext(StarWarsContext);
 
   const columnFilter = [
@@ -30,7 +30,7 @@ function FilterForm() {
     setFilters({ ...filters, filterByNumericValues });
   }
 
-  let filterIteration = data;
+  let filterIteration = planetData;
   if (filters.filterByNumericValues.length > 0) {
     filters.filterByNumericValues.map((filter) => {
       if (filter.comparison === 'maior que') {
@@ -58,7 +58,7 @@ function FilterForm() {
 
   useEffect(() => {
     setFilterByNumericValue(filterIteration);
-  }, [filters.filterByNumericValues]);
+  }, [filterIteration, filters.filterByNumericValues, setFilterByNumericValue]);
 
   function checkValidity() {
     if (newColumnFilter.length === 0) return true;
