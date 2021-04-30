@@ -24,9 +24,7 @@ function Table() {
               <th>Surface Water</th>
               <th>Population</th>
               <th>Films</th>
-              <th>Created</th>
-              <th>Edited</th>
-              <th>URL</th>
+              <th>Residents</th>
             </tr>
           </thead>
           <tbody>
@@ -42,9 +40,7 @@ function Table() {
                 <td>{planet.surface_water}</td>
                 <td>{planet.population}</td>
                 <td>{planet.films}</td>
-                <td>{planet.created}</td>
-                <td>{planet.edited}</td>
-                <td>{planet.url}</td>
+                <td>{planet.residents}</td>
               </tr>))}
           </tbody>
         </table>
