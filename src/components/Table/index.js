@@ -3,7 +3,7 @@ import StarWarsContext from '../../context/StarWarsContext';
 
 function Table() {
   const {
-    isLoading, filters, filterByNumericValue, filmData,
+    isLoading, filters, filterByNumericValue, filmData, charData,
   } = useContext(StarWarsContext);
 
   const filterByName = filterByNumericValue
@@ -43,10 +43,14 @@ function Table() {
                 <td>{planet.population}</td>
                 <td>
                   {(planet.films).map(
-                    (film) => filmData[(film[film.length - 2]) - 1].title,
+                    (film) => `${filmData[(film[film.length - 2]) - 1].title}\n`,
                   )}
                 </td>
-                <td>{planet.residents}</td>
+                <td>
+                  {(planet.residents).map(
+                    (char) => `${charData[(char.replace('https://swapi-trybe.herokuapp.com/api/people/', '').replace('/', ''))].name}\n`,
+                  )}
+                </td>
               </tr>))}
           </tbody>
         </table>

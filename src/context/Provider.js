@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import StarWarsContext from './StarWarsContext';
-import { StarWarsData, filmsData } from '../services/api';
+import { StarWarsData, filmsData, charactersData } from '../services/api';
 
 function Provider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [planetData, setPlanetData] = useState([]);
   const [filmData, setFilmData] = useState([]);
+  const [charData, setCharData] = useState([]);
   const [filters, setFilters] = useState(
     {
       filterByName: {
@@ -27,6 +28,8 @@ function Provider({ children }) {
     setPlanetData(getPlanetData);
     const getFilmData = await filmsData();
     setFilmData(getFilmData);
+    const getCharData = await charactersData();
+    setCharData(getCharData);
     setFilterByNumericValue(getPlanetData);
     setIsLoading(false);
   }
@@ -39,6 +42,7 @@ function Provider({ children }) {
     isLoading,
     planetData,
     filmData,
+    charData,
     filters,
     setFilters,
     filterByNumericValue,

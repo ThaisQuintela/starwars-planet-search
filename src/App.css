@@ -1,5 +1,6 @@
 main {
-  background: linear-gradient(to bottom, #fbebd9 5%, #ee5d6c,	#6a0d83);
+  background: linear-gradient(to bottom, #fbebd9 20%, #ee5d6c,	#6a0d83);
+  min-height: 100vh;
 }
 
 .starwars {

@@ -28,3 +28,34 @@ export const filmsData = async () => {
   const { results } = await requestData.json();
   return results;
 };
+
+const charactersUrls = [
+  'https://swapi-trybe.herokuapp.com/api/people/?page=1',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=2',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=3',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=4',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=5',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=6',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=7',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=8',
+  'https://swapi-trybe.herokuapp.com/api/people/?page=9',
+];
+
+async function fetchCharactersData() {
+  const promises = charactersUrls.map(async (url) => {
+    const requestCharactersData = await fetch(url);
+    const data = await requestCharactersData.json();
+    return data.results;
+  });
+  return Promise.all(promises);
+}
+
+const SEVENTEEN = 17;
+export const charactersData = async () => {
+  const results = await fetchCharactersData();
+  const finalResult = results.flat();
+  // solve the problems with non-existent characters
+  finalResult.splice(0, 0, '');
+  finalResult.splice(SEVENTEEN, 0, '');
+  return finalResult;
+};
