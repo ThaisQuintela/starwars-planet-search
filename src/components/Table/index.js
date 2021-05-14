@@ -11,7 +11,7 @@ function Table() {
       .includes(filters.filterByName.name.toLowerCase()));
 
   return (
-    isLoading ? 'Loading'
+    isLoading ? 'loading...'
       : (
         <table>
           <thead>
@@ -43,12 +43,12 @@ function Table() {
                 <td>{planet.population}</td>
                 <td>
                   {(planet.films).map(
-                    (film) => `${filmData[(film[film.length - 2]) - 1].title}\n`,
+                    (film) => ` - ${filmData[(film[film.length - 2]) - 1].title}`,
                   )}
                 </td>
                 <td>
                   {(planet.residents).map(
-                    (char) => `${charData[(char.replace('https://swapi-trybe.herokuapp.com/api/people/', '').replace('/', ''))].name}\n`,
+                    (char) => ` - ${charData[(char.replace('https://swapi-trybe.herokuapp.com/api/people/', '').replace('/', '')) - 1].name}`,
                   )}
                 </td>
               </tr>))}

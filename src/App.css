@@ -1,8 +1,16 @@
 main {
-  background: linear-gradient(to bottom, #fbebd9 20%, #ee5d6c,	#6a0d83);
+  background: linear-gradient(to bottom, #fbebd9 25%, #ee5d6c, #6a0d83);
   min-height: 100vh;
 }
 
 .starwars {
   max-width: 100vw;
+}
+
+.logo {
+  height: 40%;
+  left: 35%;
+  opacity: 90%;
+  position: absolute;
+  top: -3rem;
 }

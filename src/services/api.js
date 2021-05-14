@@ -1,4 +1,5 @@
 // https://oieduardorabelo.medium.com/javascript-armadilhas-do-asyn-await-em-loops-1cdad44db7f0
+// https://stackoverflow.com/questions/42489918/async-await-inside-arraymap
 const planetUrls = [
   'https://swapi-trybe.herokuapp.com/api/planets/?page=1',
   'https://swapi-trybe.herokuapp.com/api/planets/?page=2',
@@ -54,8 +55,7 @@ const SEVENTEEN = 17;
 export const charactersData = async () => {
   const results = await fetchCharactersData();
   const finalResult = results.flat();
-  // solve the problems with non-existent characters
-  finalResult.splice(0, 0, '');
+  // solve the problem with non-existent characters
   finalResult.splice(SEVENTEEN, 0, '');
   return finalResult;
 };
