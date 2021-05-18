@@ -70,7 +70,7 @@ function FilterForm() {
   } */
 
   return (
-    <header>
+    <header className="container">
       <form>
         <label htmlFor="name-filter">
           Planet name:

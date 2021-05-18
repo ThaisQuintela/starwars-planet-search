@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 main {
   background: linear-gradient(to bottom, #fbebd9 25%, #ee5d6c, #6a0d83);
   min-height: 100vh;
@@ -8,9 +12,9 @@ main {
 }
 
 .logo {
-  height: 40%;
-  left: 35%;
+  left: 38%;
   opacity: 90%;
   position: absolute;
-  top: -3rem;
+  top: -2rem;
+  width: 25%;
 }
