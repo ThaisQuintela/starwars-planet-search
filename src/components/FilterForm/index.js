@@ -19,7 +19,7 @@ function FilterForm() {
     .includes(column));
   // https://stackoverflow.com/questions/34901593/how-to-filter-an-array-from-all-elements-of-another-array
 
-  const comparisonFilter = ['maior que', 'menor que', 'igual a'];
+  const comparisonFilter = ['bigger than', 'less than', 'equal to'];
 
   function handleCLick() {
     const numericValues = filters.filterByNumericValues;
@@ -33,15 +33,15 @@ function FilterForm() {
   let filterIteration = planetData;
   if (filters.filterByNumericValues.length > 0) {
     filters.filterByNumericValues.map((filter) => {
-      if (filter.comparison === 'maior que') {
+      if (filter.comparison === 'bigger than') {
         filterIteration = filterIteration.filter(
           (planet) => parseInt(planet[filter.column], 10) > parseInt(filter.value, 10),
         );
-      } if (filter.comparison === 'menor que') {
+      } if (filter.comparison === 'less than') {
         filterIteration = filterIteration.filter(
           (planet) => parseInt(planet[filter.column], 10) < parseInt(filter.value, 10),
         );
-      } if (filter.comparison === 'igual a') {
+      } if (filter.comparison === 'equal to') {
         filterIteration = filterIteration.filter(
           (planet) => parseInt(planet[filter.column], 10) === parseInt(filter.value, 10),
         );
@@ -70,11 +70,12 @@ function FilterForm() {
   } */
 
   return (
-    <header className="container">
+    <header className="filters container-fluid py-3 d-flex justify-content-center">
       <form>
-        <label htmlFor="name-filter">
+        <label htmlFor="name-filter" className="form-label mx-2">
           Planet name:
           <input
+            className="form-control form-control-sm"
             name="name-filter"
             id="name-filter"
             data-testid="name-filter"
@@ -83,9 +84,10 @@ function FilterForm() {
             ) }
           />
         </label>
-        <label htmlFor="column">
+        <label htmlFor="column" className="form-label mx-2">
           Column:
           <select
+            className="form-select form-select-sm"
             name="column"
             id="column"
             data-testid="column-filter"
@@ -93,9 +95,10 @@ function FilterForm() {
             {newColumnFilter.map((column) => <option key={ column }>{ column }</option>)}
           </select>
         </label>
-        <label htmlFor="comparison">
+        <label htmlFor="comparison" className="form-label mx-2">
           Comparison:
           <select
+            className="form-select form-select-sm"
             name="comparison"
             id="comparison"
             data-testid="comparison-filter"
@@ -103,9 +106,10 @@ function FilterForm() {
             { comparisonFilter.map((item) => <option key={ item }>{ item }</option>) }
           </select>
         </label>
-        <label htmlFor="value">
+        <label htmlFor="value" className="form-label mx-2">
           Value:
           <input
+            className="form-control form-control-sm"
             type="number"
             name="value"
             id="value"
@@ -113,6 +117,7 @@ function FilterForm() {
           />
         </label>
         <button
+          className="btn btn-sm btn-light mx-2 mb-3"
           type="button"
           data-testid="button-filter"
           onClick={ () => handleCLick() }
@@ -120,9 +125,17 @@ function FilterForm() {
         >
           Filter
         </button>
-        <label htmlFor="column-sort">
-          Oyder by:
-          <select name="column-sort" id="column-sort" data-testid="column-sort">
+        <label
+          htmlFor="column-sort"
+          className="form-label mt-3 mx-2 d-flex align-items-center text-nowrap"
+        >
+          Order by:
+          <select
+            className="form-select form-select-sm mx-2 w-25"
+            name="column-sort"
+            id="column-sort"
+            data-testid="column-sort"
+          >
             <option>Name</option>
             <option>Rotation Period</option>
             <option>Orbital Period</option>
@@ -130,9 +143,10 @@ function FilterForm() {
             <option>Surface Water</option>
             <option>Population</option>
           </select>
-          <label htmlFor="ASC">
+          <label htmlFor="ASC" className="form-label d-flex my-0">
             ASC
             <input
+              className="form-check-input mx-2"
               type="radio"
               id="ASC"
               name="column-sort"
@@ -140,9 +154,10 @@ function FilterForm() {
               data-testid="column-sort-input-asc"
             />
           </label>
-          <label htmlFor="DESC">
+          <label htmlFor="DESC" className="form-label d-flex my-0">
             DESC
             <input
+              className="form-check-input mx-2"
               type="radio"
               id="DESC"
               name="column-sort"
@@ -151,6 +166,7 @@ function FilterForm() {
             />
           </label>
           <button
+            className="btn btn-sm btn-light"
             type="button"
             data-testid="column-sort-button"
           //  onClick={ columnSort() }

@@ -4,6 +4,7 @@ body {
 
 main {
   background: linear-gradient(to bottom, #fbebd9 25%, #ee5d6c, #6a0d83);
+  font-family: Roboto , sans-serif;
   min-height: 100vh;
 }
 
@@ -17,4 +18,8 @@ main {
   position: absolute;
   top: -2rem;
   width: 25%;
+}
+
+.filters {
+  border-top: 0.5rem solid #060000;
 }

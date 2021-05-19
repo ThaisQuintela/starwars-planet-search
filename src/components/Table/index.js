@@ -13,7 +13,9 @@ function Table() {
   return (
     isLoading ? 'loading...'
       : (
-        <table>
+        <table
+          className="table table-responsive table-sm align-middle table-hover text-center"
+        >
           <thead>
             <tr>
               <th>Name</th>
@@ -31,8 +33,8 @@ function Table() {
           </thead>
           <tbody>
             {filterByName.map((planet, index) => (
-              <tr key={ index }>
-                <td data-testid="planet-name">{planet.name}</td>
+              <tr key={ index } className="border-bottom border-secondary">
+                <td data-testid="planet-name" className="fw-bold">{planet.name}</td>
                 <td>{planet.rotation_period}</td>
                 <td>{planet.orbital_period}</td>
                 <td>{planet.diameter}</td>

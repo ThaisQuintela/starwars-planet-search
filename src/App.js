@@ -9,7 +9,7 @@ import logo from './images/star-wars-logo.svg';
 function App() {
   return (
     <Provider>
-      <main className="">
+      <main>
         <img src={ starwars } alt="Jedi" className="starwars" />
         <img src={ logo } alt="Logo Star Wars" className="logo" />
         <FilterForm />
