@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed8296ab48819e801939933de2c1f2f3",
+    "revision": "8733f48bdfdff34c08f063ee1d5858e3",
     "url": "/starwars-planet-search/index.html"
   },
   {
-    "revision": "3e07c40b20f3d600cf3f",
+    "revision": "956b1453ab7daa740330",
     "url": "/starwars-planet-search/static/css/main.55740ab0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/starwars-planet-search/static/js/2.32c72fc8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e07c40b20f3d600cf3f",
-    "url": "/starwars-planet-search/static/js/main.23b05d49.chunk.js"
+    "revision": "956b1453ab7daa740330",
+    "url": "/starwars-planet-search/static/js/main.269fc1c8.chunk.js"
   },
   {
     "revision": "7ae9ac9354f1d33a3553",
