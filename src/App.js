@@ -10,8 +10,8 @@ function App() {
   return (
     <Provider>
       <main>
-        <img src={ starwars } alt="Jedi" className="starwars" />
         <img src={ logo } alt="Logo Star Wars" className="logo" />
+        <img src={ starwars } alt="Jedi" className="starwars" />
         <FilterForm />
         <Table />
       </main>
