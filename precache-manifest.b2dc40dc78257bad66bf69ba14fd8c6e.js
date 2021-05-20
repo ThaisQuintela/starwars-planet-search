@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27b8d81ec413c09688e928b785689408",
+    "revision": "fe867727e8857385860ac83d35947a30",
     "url": "/starwars-planet-search/index.html"
   },
   {
-    "revision": "87f2e54c855e368e6be7",
-    "url": "/starwars-planet-search/static/css/main.f22edaf3.chunk.css"
+    "revision": "17d298ec856741693280",
+    "url": "/starwars-planet-search/static/css/main.cd20aaae.chunk.css"
   },
   {
-    "revision": "4019c4b61feb4f28d5dc",
-    "url": "/starwars-planet-search/static/js/2.32c72fc8.chunk.js"
+    "revision": "cb63804f6a70055b10d6",
+    "url": "/starwars-planet-search/static/js/2.6b212f40.chunk.js"
   },
   {
     "revision": "570d362d673dab785e62d2b8563e1118",
-    "url": "/starwars-planet-search/static/js/2.32c72fc8.chunk.js.LICENSE.txt"
+    "url": "/starwars-planet-search/static/js/2.6b212f40.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "87f2e54c855e368e6be7",
-    "url": "/starwars-planet-search/static/js/main.269fc1c8.chunk.js"
+    "revision": "17d298ec856741693280",
+    "url": "/starwars-planet-search/static/js/main.78e8a42d.chunk.js"
   },
   {
     "revision": "7ae9ac9354f1d33a3553",
