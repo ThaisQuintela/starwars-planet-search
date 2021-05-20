@@ -22,3 +22,8 @@ main {
 .filters {
   border-top: 0.5rem solid #060000;
 }
+
+.filter-box {
+  border: 1px solid #e0ac0c;
+  font-size: 0.9rem;
+}

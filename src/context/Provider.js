@@ -13,6 +13,9 @@ function Provider({ children }) {
       filterByName: {
         name: '',
       },
+      filterByResidentName: {
+        resident: '',
+      },
       filterByNumericValues: [],
       order: {
         column: 'Name',

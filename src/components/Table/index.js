@@ -17,7 +17,7 @@ function Table() {
           className="table table-responsive table-sm align-middle table-hover text-center"
         >
           <thead>
-            <tr>
+            <tr className="align-middle">
               <th>Name</th>
               <th>Rotation Period</th>
               <th>Orbital Period</th>
@@ -50,7 +50,8 @@ function Table() {
                 </td>
                 <td>
                   {(planet.residents).map(
-                    (char) => ` - ${charData[(char.replace('https://swapi-trybe.herokuapp.com/api/people/', '').replace('/', '')) - 1].name}`,
+                    (char) => ` - ${charData[(char.replace('https://swapi-trybe.herokuapp.com/api/people/', '')
+                      .replace('/', '')) - 1].name}`,
                   )}
                 </td>
               </tr>))}

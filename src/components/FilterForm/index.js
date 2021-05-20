@@ -58,7 +58,7 @@ function FilterForm() {
 
   useEffect(() => {
     setFilterByNumericValue(filterIteration);
-  }, [filterIteration, filters.filterByNumericValues, setFilterByNumericValue]);
+  }, [filters.filterByNumericValues]);
 
   function checkValidity() {
     if (newColumnFilter.length === 0) return true;
@@ -72,10 +72,14 @@ function FilterForm() {
   return (
     <header className="filters container-fluid py-3 d-flex justify-content-center">
       <form>
-        <label htmlFor="name-filter" className="form-label mx-2">
+        <span className="ms-2 fw-bold">Filter by:</span>
+        <label
+          htmlFor="name-filter"
+          className="form-label mx-2 d-inline-flex text-nowrap align-center"
+        >
           Planet name:
           <input
-            className="form-control form-control-sm"
+            className="form-control form-control-sm ms-2"
             name="name-filter"
             id="name-filter"
             data-testid="name-filter"
@@ -84,52 +88,79 @@ function FilterForm() {
             ) }
           />
         </label>
-        <label htmlFor="column" className="form-label mx-2">
-          Column:
-          <select
-            className="form-select form-select-sm"
-            name="column"
-            id="column"
-            data-testid="column-filter"
-          >
-            {newColumnFilter.map((column) => <option key={ column }>{ column }</option>)}
-          </select>
-        </label>
-        <label htmlFor="comparison" className="form-label mx-2">
-          Comparison:
-          <select
-            className="form-select form-select-sm"
-            name="comparison"
-            id="comparison"
-            data-testid="comparison-filter"
-          >
-            { comparisonFilter.map((item) => <option key={ item }>{ item }</option>) }
-          </select>
-        </label>
-        <label htmlFor="value" className="form-label mx-2">
-          Value:
+        <label
+          htmlFor="resident-filter"
+          className="form-label mx-2 d-inline-flex text-nowrap"
+        >
+          Resident name:
           <input
-            className="form-control form-control-sm"
-            type="number"
-            name="value"
-            id="value"
-            data-testid="value-filter"
+            className="form-control form-control-sm ms-2"
+            name="resident-filter"
+            id="resident-filter"
+            onChange={ ({ target: { value } }) => setFilters(
+              { ...filters, filterByResidentName: { resident: value } },
+            ) }
           />
         </label>
-        <button
-          className="btn btn-sm btn-light mx-2 mb-3"
-          type="button"
-          data-testid="button-filter"
-          onClick={ () => handleCLick() }
-          disabled={ checkValidity() }
-        >
-          Filter
-        </button>
+        <div className="d-flex align-items-center mt-2">
+          <label
+            htmlFor="column"
+            className="form-label mx-2 my-0 d-flex align-items-center"
+          >
+            <span>Column:</span>
+            <select
+              className="form-select form-select-sm ms-2"
+              name="column"
+              id="column"
+              data-testid="column-filter"
+            >
+              {newColumnFilter.map(
+                (column) => <option key={ column }>{ column }</option>,
+              )}
+            </select>
+          </label>
+          <label
+            htmlFor="comparison"
+            className="form-label mx-2 my-0 d-flex align-items-center"
+          >
+            Comparison:
+            <select
+              className="form-select form-select-sm ms-2"
+              name="comparison"
+              id="comparison"
+              data-testid="comparison-filter"
+            >
+              { comparisonFilter.map((item) => <option key={ item }>{ item }</option>) }
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+            className="form-label mx-2 my-0 d-flex w-25 align-items-center"
+          >
+            Value:
+            <input
+              className="form-control form-control-sm ms-2"
+              type="number"
+              name="value"
+              id="value"
+              data-testid="value-filter"
+            />
+          </label>
+          <button
+            className="btn btn-sm btn-light mx-2"
+            type="button"
+            data-testid="button-filter"
+            onClick={ () => handleCLick() }
+            disabled={ checkValidity() }
+          >
+            Filter
+          </button>
+        </div>
         <label
           htmlFor="column-sort"
           className="form-label mt-3 mx-2 d-flex align-items-center text-nowrap"
         >
-          Order by:
+          <span className="fw-bold">Order by:</span>
           <select
             className="form-select form-select-sm mx-2 w-25"
             name="column-sort"
@@ -175,13 +206,22 @@ function FilterForm() {
           </button>
         </label>
       </form>
-      { filters.filterByNumericValues.map((item, index) => (
-        <div data-testid="filter" id={ index } key={ index }>
-          <span>
-            { `${item.column} ${item.comparison} ${item.value}` }
-          </span>
-          <button type="button" onClick={ () => deleteFilter(item) }>X</button>
-        </div>)) }
+      <div className="filter-box bg-light rounded px-3 py-1 m-1 w-25">
+        <p className="text-center py-1 m-0 fw-bold">Used filters:</p>
+        { filters.filterByNumericValues.map((item, index) => (
+          <div data-testid="filter" className="d-flex ms-3" id={ index } key={ index }>
+            <span className="me-auto align-self-center">
+              { `${item.column} ${item.comparison} ${item.value}` }
+            </span>
+            <button
+              type="button"
+              className="btn btn-sm btn-warning mb-1 mx-2"
+              onClick={ () => deleteFilter(item) }
+            >
+              <i className="bi bi-x-lg" />
+            </button>
+          </div>)) }
+      </div>
     </header>
   );
 }
