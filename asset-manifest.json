@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/starwars-planet-search/static/css/main.cd20aaae.chunk.css",
-    "main.js": "/starwars-planet-search/static/js/main.78e8a42d.chunk.js",
-    "main.js.map": "/starwars-planet-search/static/js/main.78e8a42d.chunk.js.map",
+    "main.css": "/starwars-planet-search/static/css/main.fc56d0b2.chunk.css",
+    "main.js": "/starwars-planet-search/static/js/main.60206ab9.chunk.js",
+    "main.js.map": "/starwars-planet-search/static/js/main.60206ab9.chunk.js.map",
     "runtime-main.js": "/starwars-planet-search/static/js/runtime-main.9d6297ae.js",
     "runtime-main.js.map": "/starwars-planet-search/static/js/runtime-main.9d6297ae.js.map",
-    "static/js/2.6b212f40.chunk.js": "/starwars-planet-search/static/js/2.6b212f40.chunk.js",
-    "static/js/2.6b212f40.chunk.js.map": "/starwars-planet-search/static/js/2.6b212f40.chunk.js.map",
+    "static/js/2.eaeb58a4.chunk.js": "/starwars-planet-search/static/js/2.eaeb58a4.chunk.js",
+    "static/js/2.eaeb58a4.chunk.js.map": "/starwars-planet-search/static/js/2.eaeb58a4.chunk.js.map",
     "index.html": "/starwars-planet-search/index.html",
-    "precache-manifest.b2dc40dc78257bad66bf69ba14fd8c6e.js": "/starwars-planet-search/precache-manifest.b2dc40dc78257bad66bf69ba14fd8c6e.js",
+    "precache-manifest.3ac13f52b8b1114bc77d5170b04204d0.js": "/starwars-planet-search/precache-manifest.3ac13f52b8b1114bc77d5170b04204d0.js",
     "service-worker.js": "/starwars-planet-search/service-worker.js",
-    "static/css/main.cd20aaae.chunk.css.map": "/starwars-planet-search/static/css/main.cd20aaae.chunk.css.map",
-    "static/js/2.6b212f40.chunk.js.LICENSE.txt": "/starwars-planet-search/static/js/2.6b212f40.chunk.js.LICENSE.txt",
+    "static/css/main.fc56d0b2.chunk.css.map": "/starwars-planet-search/static/css/main.fc56d0b2.chunk.css.map",
+    "static/js/2.eaeb58a4.chunk.js.LICENSE.txt": "/starwars-planet-search/static/js/2.eaeb58a4.chunk.js.LICENSE.txt",
     "static/media/Star_Wars_silhouette_Olly_Moss_artwork.jpg": "/starwars-planet-search/static/media/Star_Wars_silhouette_Olly_Moss_artwork.3b06afbb.jpg",
     "static/media/star-wars-logo.svg": "/starwars-planet-search/static/media/star-wars-logo.2db77352.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9d6297ae.js",
-    "static/js/2.6b212f40.chunk.js",
-    "static/css/main.cd20aaae.chunk.css",
-    "static/js/main.78e8a42d.chunk.js"
+    "static/js/2.eaeb58a4.chunk.js",
+    "static/css/main.fc56d0b2.chunk.css",
+    "static/js/main.60206ab9.chunk.js"
   ]
 }
