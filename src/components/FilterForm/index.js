@@ -75,7 +75,7 @@ function FilterForm() {
         <span className="ms-2 fw-bold">Filter by:</span>
         <label
           htmlFor="name-filter"
-          className="form-label mx-2 d-inline-flex text-nowrap align-center"
+          className="form-label mx-3 d-inline-flex align-items-center text-nowrap"
         >
           Planet name:
           <input
@@ -90,7 +90,7 @@ function FilterForm() {
         </label>
         <label
           htmlFor="resident-filter"
-          className="form-label mx-2 d-inline-flex text-nowrap"
+          className="form-label mx-2 d-inline-flex align-items-center text-nowrap"
         >
           Resident name:
           <input
@@ -197,7 +197,7 @@ function FilterForm() {
             />
           </label>
           <button
-            className="btn btn-sm btn-light"
+            className="btn btn-sm btn-light mx-2"
             type="button"
             data-testid="column-sort-button"
           //  onClick={ columnSort() }
@@ -206,7 +206,7 @@ function FilterForm() {
           </button>
         </label>
       </form>
-      <div className="filter-box bg-light rounded px-3 py-1 m-1 w-25">
+      <div className="filter-box bg-light border rounded px-3 py-1 m-1 w-25">
         <p className="text-center py-1 m-0 fw-bold">Used filters:</p>
         { filters.filterByNumericValues.map((item, index) => (
           <div data-testid="filter" className="d-flex ms-3" id={ index } key={ index }>

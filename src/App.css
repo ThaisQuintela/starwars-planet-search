@@ -9,7 +9,13 @@ main {
 }
 
 .starwars {
-  max-width: 100vw;
+  max-width: 100%;
+}
+
+.loading-logo {
+  left: 25%;
+  position: absolute;
+  top: -2rem;
 }
 
 .logo {
@@ -20,10 +26,10 @@ main {
 }
 
 .filters {
+  border-bottom: 0.1rem solid #060000;
   border-top: 0.5rem solid #060000;
 }
 
 .filter-box {
-  border: 1px solid #e0ac0c;
   font-size: 0.9rem;
 }
